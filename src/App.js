@@ -4,8 +4,9 @@ function App() {
   const expenses = [
     { title: "Buying Car", amount: 7000, date: new Date(2022, 3, 18) },
     { title: "Grocery Shopping", amount: 1000, date: new Date(2021, 9, 28) },
-    { title: "Pharmacy", amount: 100, date: new Date(2022, 3, 8) },
-    { title: "Book Shopping", amount: 500, date: new Date(2022, 1, 13) },
+    { title: "Pharmacy", amount: 10, date: new Date(2022, 3, 8) },
+    { title: "Book Shopping", amount: 30, date: new Date(2022, 1, 13) },
+    { title: "Travelling Fees", amount: 100, date: new Date(2021, 2, 3) }
   ];
 
   return (
@@ -30,6 +31,11 @@ function App() {
         title={expenses[3].title}
         amount={expenses[3].amount}
         date={expenses[3].date}
+      ></ExpenseItem>
+       <ExpenseItem
+        title={expenses[4].title}
+        amount={expenses[4].amount}
+        date={expenses[4].date}
       ></ExpenseItem>
     </div>
   );
