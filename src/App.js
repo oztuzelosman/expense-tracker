@@ -1,5 +1,6 @@
 import ExpenseItem from "./components/ExpenseItem";
 
+
 function App() {
   const expenses = [
     { title: "Buying Car", amount: 7000, date: new Date(2022, 3, 18) },
