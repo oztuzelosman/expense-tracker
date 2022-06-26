@@ -1,5 +1,8 @@
 import "./NewExpense.css";
 
-const NewExpense = () =>{
-    
-}
+const NewExpense = () => {
+  return;
+  <div></div>;
+};
+
+export default NewExpense;
