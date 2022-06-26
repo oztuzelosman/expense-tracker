@@ -13,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <NewExpense></NewExpense>
       <Expenses items={expenses}></Expenses>
     </div>
   );
