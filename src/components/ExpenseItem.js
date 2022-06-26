@@ -8,6 +8,7 @@ function ExpenseItem(props) {
   const [initialTitle, setinitialTitle] = useState(props.title);
 
   const clickHandler = () => {
+    setinitialTitle("Updated!")
     console.log(initialTitle);
   };
 
