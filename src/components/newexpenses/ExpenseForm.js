@@ -30,7 +30,7 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     };
 
-    props.onGrabExpenseData();
+    props.onGrabExpenseData(expenseData);
     /* console.log(expenseData); */
     setEnteredTitle("");
     setEnteredAmount("");
