@@ -11,9 +11,13 @@ function App() {
     { title: "Travelling Fees", amount: 100, date: new Date(2021, 2, 3) }
   ];
 
+  const addExpenseHandler = (items) => {
+console.log(items)
+  }
+
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenses}></Expenses>
     </div>
   );

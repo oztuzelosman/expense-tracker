@@ -1,11 +1,12 @@
 import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
 
-const NewExpense = () => {
+const NewExpense = (props) => {
   const GrabExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
     };
+    props.onAddExpense(expenseData)
     console.log(expenseData);
   };
   return (
