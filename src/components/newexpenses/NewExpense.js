@@ -7,7 +7,7 @@ const NewExpense = (props) => {
       ...enteredExpenseData,
     };
     props.onAddExpense(expenseData)
-    console.log(expenseData);
+  /*   console.log(expenseData); to show data only in app.js*/ 
   };
   return (
     <div className="new-expense">
