@@ -4,9 +4,12 @@ import "./Expenses.css";
 import Card from "./Card";
 
 function Expenses(props) {
+  const FilterData = (data) => {
+    console.log(data);
+  };
   return (
     <Card className="expenses">
-      <FilterExpenses></FilterExpenses>
+      <FilterExpenses onGetFilterData={FilterData}></FilterExpenses>
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}

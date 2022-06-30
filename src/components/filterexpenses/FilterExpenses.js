@@ -1,8 +1,9 @@
 import "./FilterExpenses.css";
 
-const FilterExpenses = () => {
+const FilterExpenses = (props) => {
   const changeFilterValue = (event) => {
-    console.log(event.target.value);
+    props.onGetFilterData(event.target.value)
+    /* console.log(event.target.value); */
   };
 
   return (
