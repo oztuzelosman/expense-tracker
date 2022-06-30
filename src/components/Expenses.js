@@ -9,10 +9,13 @@ function Expenses(props) {
 
   const FilterData = (data) => {
     setFilteredYear(data)
+    console.log(data)
+    console.log("in expenses.js")
+
   };
   return (
     <Card className="expenses">
-      <FilterExpenses value={filteredYear} onGetFilterData={FilterData}></FilterExpenses>
+      <FilterExpenses selected={filteredYear} onGetFilterData={FilterData}></FilterExpenses>
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}
