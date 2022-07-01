@@ -8,15 +8,26 @@ function Expenses(props) {
   const [filteredYear, setFilteredYear] = useState("2019");
 
   const FilterData = (data) => {
-    setFilteredYear(data)
-    console.log(data)
-    console.log("in expenses.js")
-
+    setFilteredYear(data);
+    console.log(data);
+    console.log("in expenses.js");
   };
   return (
     <Card className="expenses">
-      <FilterExpenses selected={filteredYear} onGetFilterData={FilterData}></FilterExpenses>
-      <ExpenseItem
+      <FilterExpenses
+        selected={filteredYear}
+        onGetFilterData={FilterData}
+      ></FilterExpenses>
+
+      {props.items.map((expense) => (
+        <ExpenseItem
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        ></ExpenseItem>
+      ))}
+
+      {/* <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}
         date={props.items[0].date}
@@ -40,7 +51,7 @@ function Expenses(props) {
         title={props.items[4].title}
         amount={props.items[4].amount}
         date={props.items[4].date}
-      ></ExpenseItem>
+      ></ExpenseItem> */}
     </Card>
   );
 }
