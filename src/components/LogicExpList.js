@@ -1,20 +1,23 @@
-import "./LogicExpList.css"
+import "./LogicExpList.css";
 import ExpenseItem from "./ExpenseItem";
 
+const LogicExpList = (props) => {
+  if (props.itemprop.length === 0) {
+    return <h2 className="expenses-list__fallback">No Available Content</h2>;
+  }
 
-const LogicExpList = (props)=>{
-    let expenseContent = <p>No content is available</p>;
-
-    if (props.itemprop.length > 0) {
-      expenseContent = props.itemprop.map((expense) => (
+  return (
+    <ul className="expenses-list">
+      {props.itemprop.map((expense) => (
         <ExpenseItem
           key={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
         ></ExpenseItem>
-      ));
-    }
-}
+      ))}
+    </ul>
+  );
+};
 
 export default LogicExpList;
