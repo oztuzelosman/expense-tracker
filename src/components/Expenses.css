@@ -1,3 +1,9 @@
+p {
+    color: #F9F2ED;
+    font-size: medium;
+    font-weight: 400;
+    margin-left: 2rem;
+}
 
 .expenses {
     padding: 1rem;
