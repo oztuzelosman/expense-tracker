@@ -3,6 +3,7 @@ import FilterExpenses from "./filterexpenses/FilterExpenses";
 import "./Expenses.css";
 import Card from "./Card";
 import LogicExpList from "./LogicExpList";
+import ExpensesChart from "./ExpensesChart";
 
 function Expenses(props) {
   const [filteredYear, setFilteredYear] = useState("2019");
@@ -22,7 +23,8 @@ function Expenses(props) {
       <FilterExpenses
         selected={filteredYear}
         onGetFilterData={FilterData}
-      ></FilterExpenses>
+      />
+      <ExpensesChart expenses={filteredExpenses}/>
       <LogicExpList itemprop={filteredExpenses}></LogicExpList>
     </Card>
   );
